@@ -1,0 +1,102 @@
+/* styles.css */
+
+.book-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.book-item {
+  width: calc(25% - 20px); /* Hiển thị 4 cột trên màn hình lớn */
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.book-item:hover {
+  transform: scale(1.05);
+  background-color: #ccffff;
+}
+
+.book-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
+}
+
+.book-image {
+  width: 100px; /* Chiều rộng ảnh */
+  height: auto;
+  margin-right: 20px;
+}
+
+.book-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Đảm bảo nội dung căn bên phải ảnh */
+}
+
+.book-info h4,
+.book-info p {
+  margin: 5px 0;
+  text-align: left; /* Văn bản căn lề trái */
+}
+
+.book-info button {
+  align-self: flex-start;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.book-info button:hover {
+  background-color: #0056b3;
+}
+
+/* Đảm bảo tương thích với các thiết bị nhỏ */
+@media (max-width: 992px) {
+  .book-item {
+    width: calc(50% - 20px); /* 2 cột trên màn hình vừa */
+  }
+}
+
+@media (max-width: 576px) {
+  .book-item {
+    width: 100%; /* 1 cột trên màn hình nhỏ */
+    flex-direction: column;
+  }
+
+  .book-link {
+    flex-direction: column;
+  }
+
+  .book-image {
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 100%; /* Chiều rộng ảnh */
+  }
+
+  .book-info {
+    align-items: center; /* Căn giữa văn bản với ảnh trên màn hình nhỏ */
+  }
+
+  .book-info h4,
+  .book-info p {
+    text-align: center; /* Văn bản căn giữa trên màn hình nhỏ */
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

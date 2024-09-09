@@ -1,0 +1,61 @@
+/* CSS cho toàn bộ phần chứa */
+.detail {
+  display: flex;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* CSS cho phần hình ảnh */
+.hinh {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+
+.hinh img {
+  /* max-width: 200px; */
+  width: 443px;
+  height: 623px;
+  border-radius: 8px;
+}
+
+/* CSS cho phần profile chứa thông tin sách */
+.profile {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px; /* Đặt chiều rộng cố định */
+  height: auto; /* Đặt chiều cao cố định */
+}
+
+.profile h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.profile p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/* CSS cho nút Đặt mượn */
+.profile button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.profile button:hover {
+  background-color: #0056b3;
+}

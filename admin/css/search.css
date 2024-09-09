@@ -1,0 +1,131 @@
+/* CSS cho thanh tìm kiếm */
+.search-container {
+  position: fixed; /* Giữ thanh tìm kiếm cố định khi cuộn */
+  top: 0; /* Đặt thanh tìm kiếm ở đầu trang */
+  left: 270px; /* Căn chỉnh theo khoảng cách từ sidebar */
+  right: 0; /* Đảm bảo thanh tìm kiếm mở rộng toàn bộ chiều rộng trang */
+  margin: 0 auto;
+  max-width: 100%; /* Đảm bảo chiều rộng thanh tìm kiếm không vượt quá kích thước cửa sổ */
+  display: flex;
+  justify-content: space-between; /* Giữ khoảng cách giữa các phần tử (nút, input, avatar) */
+  align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+  background-color: #f4f4f4; /* Đảm bảo nền thanh tìm kiếm đồng nhất */
+  z-index: 1000; /* Đảm bảo thanh tìm kiếm hiển thị trên các phần tử khác */
+  padding: 10px 20px; /* Thêm khoảng cách giữa các phần tử và viền */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ để thanh tìm kiếm nổi bật */
+}
+
+.search-container form {
+  display: flex;
+  width: 650px; /* Đặt chiều rộng cố định cho form */
+  justify-content: flex-start; /* Giữ form và nút tìm kiếm ở đầu */
+}
+
+.search-container input[type="text"] {
+  width: 100%; /* Đảm bảo input mở rộng đầy đủ trong form */
+  padding: 10px;
+  border-radius: 5px 0 0 5px; /* Góc bo tròn chỉ ở bên trái */
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.search-container button {
+  padding: 10px 20px;
+  border-radius: 0 5px 5px 0; /* Góc bo tròn chỉ ở bên phải */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-container button[type="submit"] {
+  border-radius: 0 5px 5px 0; /* Góc bo tròn chỉ ở bên phải */
+}
+
+.search-container button:hover {
+  background-color: #0056b3;
+}
+
+/* CSS cho nút lọc */
+.filter-button {
+  margin-left: 10px;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+}
+
+.filter-button:hover {
+  background-color: #218838;
+}
+
+/* CSS cho danh sách lọc */
+.filter-options {
+  margin-top: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  display: none; /* Mặc định ẩn danh sách lọc */
+}
+
+.filter-options label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.filter-options input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.content {
+  padding-top: 70px; /* Khoảng cách phù hợp với chiều cao của thanh tìm kiếm */
+}
+
+/* CSS cho avatar */
+.avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Bo tròn hình ảnh để tạo avatar hình tròn */
+  margin-left: 20px; /* Thêm khoảng cách giữa nút và avatar */
+}
+
+.avatar img:hover {
+  cursor: pointer; /* Đổi con trỏ chuột khi di chuột qua avatar */
+}
+
+/* CSS cho h4 không có gạch chân */
+.avatar h4 {
+  margin: 0;
+  text-decoration: none; /* Loại bỏ gạch chân */
+  margin-left: 10px; /* Thêm khoảng cách giữa ảnh và tên */
+}
+
+/* chuông */
+.notification-icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.bell {
+  fill: black;
+}
+
+/* Định dạng số lượng thông báo */
+.notification-count {
+  width: 6px;
+  height: 10px;
+  background-color: red;
+  position: absolute;
+  top: -10px;
+  right: 4px;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+}

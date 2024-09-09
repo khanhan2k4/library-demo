@@ -1,0 +1,145 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+/* Đặt menu ở vị trí cố định trên màn hình khi cuộn chuột */
+.sidebar {
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  height: 100vh;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Giữ menu cố định khi cuộn */
+  top: 0; /* Cố định menu với đỉnh của cửa sổ trình duyệt */
+  left: 0; /* Cố định menu với cạnh trái của cửa sổ trình duyệt */
+  z-index: 1000; /* Đảm bảo menu luôn ở trên các phần tử khác */
+  overflow-y: auto; /* Cho phép cuộn nội dung trong menu nếu nó quá dài */
+}
+
+/* Cách top */
+.sidebar h2 {
+  margin-top: 0;
+  font-size: 24px;
+  text-align: center;
+  color: #333;
+}
+
+/* Menu cấp 1 */
+.menu-c1-container {
+  list-style: none;
+  padding: 10px;
+  border: 1px solid #d1d5db; /* Màu viền mềm mại */
+  margin-bottom: 12px;
+  background-color: #ffffff; /* Nền trắng cho menu cấp 1 */
+  border-radius: 8px; /* Tạo góc bo tròn */
+}
+
+.menu-c1-container a {
+  text-decoration: none;
+}
+.menu-c1-title {
+  color: black;
+}
+
+.menu-c1-title-container {
+  font-size: 19px;
+  font-weight: bold;
+  color: #1f2937; /* Màu chữ đậm */
+  padding: 5px;
+}
+.menu-c1-title-container > .menu-c1-title:hover {
+  color: black !important;
+  color: blue !important;
+}
+/* menu cấp 2 */
+.menu-c2 {
+  padding: 8px;
+  margin-left: 10px;
+  list-style: none;
+  font-size: 18px;
+  color: #374151; /* Màu chữ mềm mại */
+}
+
+.menu-c2-item {
+  color: #374151;
+}
+
+.menu-c2-item-container {
+  padding: 8px;
+  border: 1px solid #e5e7eb; /* Màu viền nhạt hơn */
+  margin-bottom: 8px;
+  background-color: #f9fafb; /* Nền nhạt cho menu cấp 2 */
+  border-radius: 6px; /* Tạo góc bo tròn nhẹ */
+}
+
+/* menu cấp 3 */
+.menu-c3 {
+  margin-left: 10px;
+  padding: 8px;
+  list-style: none;
+}
+
+.menu-c3-item {
+  color: #4b5563; /* Màu chữ tối nhẹ */
+}
+
+.menu-c3-container-item {
+  padding: 8px;
+  border: 1px solid #e7eaf0; /* Màu viền cực nhẹ */
+  margin-bottom: 6px;
+  background-color: #fafbfc; /* Nền nhạt tinh tế */
+  border-radius: 6px; /* Góc bo nhẹ */
+}
+
+.menu-c3-container-item:hover {
+  background-color: #60faf342;
+  cursor: pointer;
+}
+
+/* hover effects */
+.menu-c1-title-container:hover {
+  background-color: #438ba836; /* Màu xanh nhạt khi hover */
+  color: white; /* Đổi màu chữ khi hover */
+  cursor: pointer;
+  border-radius: 8px;
+}
+.menu-c2-item-container:hover {
+  background-color: #3741511c;
+}
+.menu-c2-item-container-title:hover {
+  color: black;
+  cursor: pointer;
+  border-radius: 6px;
+  color: blue;
+}
+
+.menu-c2-item:hover {
+  /* background-color: #bfdbfe; Màu xanh sáng khi hover */
+  color: blue;
+
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.menu-c3-item:hover {
+  color: blue;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.menu-c3-container-item:hover {
+  background-color: #60faf342;
+}
+
+/* Đẩy nội dung sang phải để không bị che bởi sidebar */
+.content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 270px; /* Khoảng cách để nội dung không bị che bởi sidebar */
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: margin-left 0.3s ease; /* Thêm hiệu ứng chuyển động khi thanh sidebar đóng mở */
+}

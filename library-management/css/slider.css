@@ -1,0 +1,36 @@
+.slider {
+  width: 100%;
+  overflow: hidden; /* Đảm bảo nội dung không tràn ra ngoài slider */
+}
+
+.list {
+  display: flex; /* Sắp xếp các phần tử con theo hàng ngang */
+  justify-content: space-between; /* Tạo khoảng cách đều giữa các hình ảnh */
+}
+
+.item_anh {
+  flex: 1; /* Tất cả các phần tử có cùng kích thước */
+  margin: 0 5px; /* Thêm khoảng cách giữa các phần tử nếu cần */
+}
+
+.item_anh img {
+  border-radius: 10px;
+  width: 100%; /*Đảm bảo hình ảnh chiếm toàn bộ chiều rộng của phần tử cha */
+  height: 100%; /* Duy trì tỉ lệ khung hình của ảnh */
+  object-fit: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ không gian được cấp mà không bị biến dạng */
+  display: block; /* Loại bỏ khoảng trắng bên dưới ảnh */
+  transition: transform 0.3s ease; /* Hiệu ứng phóng to khi hover */
+}
+
+.item_anh:hover img {
+  transform: scale(1.2); /* Phóng to ảnh khi hover */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Di chuyển hết chiều rộng của các ảnh */
+  }
+}

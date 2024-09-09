@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+/* Đặt menu ở vị trí cố định trên màn hình khi cuộn chuột */
+.sidebar {
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  height: 100vh;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Giữ menu cố định khi cuộn */
+  top: 0; /* Cố định menu với đỉnh của cửa sổ trình duyệt */
+  left: 0; /* Cố định menu với cạnh trái của cửa sổ trình duyệt */
+  z-index: 1000; /* Đảm bảo menu luôn ở trên các phần tử khác */
+  overflow-y: auto; /* Cho phép cuộn nội dung trong menu nếu nó quá dài */
+}
+
+/* cách top */
+.sidebar h2 {
+  margin-top: 0;
+}
+
+.menu-item {
+  margin: 15px 0;
+  padding: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background-color: #c0c0c0;
+}
+
+.submenu {
+  display: none;
+  margin-left: 20px;
+}
+
+.submenu-item {
+  padding: 8px 10px;
+  background-color: #d0d0d0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submenu-item:hover {
+  background-color: #b0b0b0;
+}
+
+/* Đẩy nội dung sang phải để không bị che bởi sidebar */
+.content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 270px; /* Khoảng cách để nội dung không bị che bởi sidebar */
+}
+
+/* CSS để loại bỏ dấu gạch chân khỏi các liên kết menu con */
+.submenu-item a {
+  text-decoration: none; /* Loại bỏ dấu gạch chân */
+  color: inherit; /* Đảm bảo màu chữ phù hợp với bố cục tổng thể */
+  display: block; /* Hiển thị như một khối để dễ dàng căn chỉnh */
+  padding: 8px 16px; /* Tạo khoảng cách xung quanh cho liên kết */
+}
+
+/* CSS cho hover */
+.submenu-item a:hover {
+  background-color: #f0f0f0; /* Màu nền khi hover */
+  color: #333; /* Màu chữ khi hover */
+}

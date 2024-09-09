@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.fixed-menu {
+  width: 100%;
+  position: fixed; /* Đặt vị trí cố định cho menu */
+  top: 0; /* Đặt menu ở trên cùng của trang */
+  left: 50%; /* Căn giữa theo chiều ngang */
+  transform: translateX(-50%); /* Đưa phần tử về giữa theo chiều ngang */
+  padding: 10px;
+  background-color: #f8f8f8; /* Màu nền của menu */
+  border: 1px solid #ddd; /* Đường viền menu */
+  border-radius: 5px; /* Bo góc menu */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng cho menu */
+  z-index: 1000; /* Đảm bảo menu nằm trên các phần tử khác */
+  display: flex; /* Sắp xếp các phần tử theo hàng */
+  justify-content: center; /* Căn giữa các phần tử theo chiều ngang */
+  gap: 10px; /* Khoảng cách giữa các phần tử */
+  align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+}
+
+.fixed-menu form {
+  display: flex;
+  gap: 10px; /* Khoảng cách giữa các phần tử trong form */
+  margin: 0; /* Xóa khoảng cách mặc định của form */
+}
+
+.fixed-menu input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.fixed-menu input[type="submit"],
+.fixed-menu input[type="button"] {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff; /* Màu nền nút */
+  color: white; /* Màu chữ */
+  cursor: pointer;
+}
+
+.fixed-menu input[type="submit"]:hover,
+.fixed-menu input[type="button"]:hover {
+  background-color: #0056b3; /* Màu nền khi di chuột qua nút */
+}
+
+.fixed-menu a {
+  text-decoration: none; /* Xóa gạch chân */
+}
+
+.fixed-menu a input[type="button"] {
+  background-color: #28a745; /* Màu nền cho nút thêm sách mới */
+}
+
+.fixed-menu a input[type="button"]:hover {
+  background-color: #218838; /* Màu nền khi di chuột qua nút thêm sách mới */
+}
+
+/* Phần nội dung chính của trang */
+.bang {
+  margin-top: 100px; /* Cung cấp khoảng cách từ đầu trang để không bị che khuất bởi menu */
+  padding: 20px; /* Thêm padding để tạo không gian quanh nội dung */
+}

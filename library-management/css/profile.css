@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.profile-management {
+  display: flex;
+  gap: 20px;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* CSS cho sidebar */
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  background-color: #f4f4f4;
+  color: #000;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Khi hover vào mục, nó chuyển màu xám nhạt */
+.sidebar ul li a:hover {
+  background-color: #e0e0e0;
+}
+
+/* Mục được chọn sẽ có màu xanh dương */
+.sidebar ul li a.active {
+  background-color: #e0e0e0;
+  color: blue;
+}
+
+.content {
+  flex-grow: 1;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+  display: none;
+}
+
+.form-section.active {
+  display: block;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.save-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.avatar-preview {
+  margin-bottom: 10px;
+}
+
+.avatar-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e0e0e0;
+  display: block;
+}
+.form-section {
+  display: none; /* Mặc định ẩn các form */
+}
+
+.form-section.active {
+  display: block; /* Chỉ form có class 'active' sẽ hiển thị */
+}
